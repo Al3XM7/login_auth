@@ -2,7 +2,7 @@ const catchError = require('../utils/catchError');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const EmailCode = require('../models/EmailCode');
-const sendEmail = require('../utils/sendemail');
+const sendEmail = require('../utils/sendEmail');
 const jwt = require('jsonwebtoken')
 
 const getAll = catchError(async(req, res) => {
