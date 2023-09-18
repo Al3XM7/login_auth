@@ -84,6 +84,11 @@ const login = catchError(async (req, res) => {
     return res.json({user, token})
 });
 
+const getLoggedUser = catchError(async (req, res) => {
+    const { user } = req;
+    return res.json(user);
+});
+
 
 
 
@@ -94,5 +99,6 @@ module.exports = {
     remove,
     update,
     verifyEmail,
-    login
+    login,
+    getLoggedUser
 }
